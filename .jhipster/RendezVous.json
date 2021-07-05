@@ -1,0 +1,46 @@
+{
+  "name": "RendezVous",
+  "fields": [
+    {
+      "fieldName": "dateRendezVous",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "heureRendezVous",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "patient",
+      "otherEntityRelationshipName": "rendezVous",
+      "relationshipName": "patient",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "medecine",
+      "otherEntityRelationshipName": "rendezVous",
+      "relationshipName": "medecine",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "consultation",
+      "otherEntityRelationshipName": "rendezVous",
+      "relationshipName": "consultation",
+      "ownerSide": true
+    }
+  ],
+  "entityTableName": "rendez_vous",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210705162945"
+}
